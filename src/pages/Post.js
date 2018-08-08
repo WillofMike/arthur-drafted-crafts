@@ -11,9 +11,9 @@ export default withRouteData(({ post }) => (
         src={`https://media.graphcms.com/resize=w:650,h:366,fit:crop/${post.coverImage.handle}`}
       /> */}
     </div>
-    {/* <Markdown
-      source={post.content}
+    <Markdown
+      source={post.description}
       escapeHtml={false}
-    /> */}
+    />
   </article>
 ))
