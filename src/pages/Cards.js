@@ -6,7 +6,7 @@ export default withRouteData(({ cardses }) => (
     <ul className="home-ul">
       {cardses.map((post, i) => (
         <li className="home-li" key={i} >
-          <Link to={`/morepost/${post.id}`} className="home-link">
+          <Link to={`/post/${post.id}`} className="home-link">
             <div className="home-placeholder">
             <h3>{post.title}</h3>
               <img

@@ -73,7 +73,7 @@ export default {
           cardses,
         }),
         children: cardses.map(post => ({
-          path: `/morepost/${post.id}`,
+          path: `/post/${post.id}`,
           component: 'src/containers/CardsPost',
           getData: () => ({
             post,
@@ -87,7 +87,7 @@ export default {
           engravingses,
         }),
         children: engravingses.map(post => ({
-          path: `/stuffpost/${post.id}`,
+          path: `/post/${post.id}`,
           component: 'src/containers/EngravingsPost',
           getData: () => ({
             post,
