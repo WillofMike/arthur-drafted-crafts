@@ -11,7 +11,7 @@ export default withRouteData(({ cardses }) => (
             alt={author.title}
             src={`${author.cardImage.url}`}
           />
-          <h1>Hello! My name is {author.description}</h1>
+          <h1>{author.Title}</h1>
         </div>
         <p>{author.description}</p>
       </div>

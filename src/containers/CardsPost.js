@@ -6,14 +6,16 @@ export default withRouteData(({ post }) => (
   <article>
     <h1>{post.title}</h1>
     <div className="placeholder">
-      {/* <img
+      <img
         alt={post.title}
-        src={`https://media.graphcms.com/resize=w:650,h:366,fit:crop/${post.coverImage.handle}`}
-      /> */}
+        src={`${post.cardImage.url}`}
+      />
     </div>
     <Markdown
       source={post.description}
       escapeHtml={false}
     />
+{console.log(post)}
+    
   </article>
 ))

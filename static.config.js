@@ -4,6 +4,7 @@ const GRAPHCMS_API = 'https://api-uswest.graphcms.com/v1/cjjuzla4806ku01ck1muh0m
 
 const query = `{
   furnitures{
+    id
     title
     description
     image {
@@ -11,9 +12,18 @@ const query = `{
     }
   }
   cardses{
+    id
 		title
     description
     cardImage {
+      url
+    }
+  }
+  engravingses{
+    id
+		title
+    description
+    laserImage {
       url
     }
   }
@@ -23,24 +33,11 @@ export default {
   getRoutes: async () => {
     const {
       furnitures, 
-      cardses
+      cardses,
+      engravingses
     } = await request(GRAPHCMS_API, query)
 
     return [
-      {
-        path: '/',
-        component: 'src/pages/Home',
-        getData: () => ({
-          furnitures,
-        }),
-        children: furnitures.map(post => ({
-          path: `/post/${post.slug}`,
-          component: 'src/pages/Post',
-          getData: () => ({
-            post,
-          }),
-        })),
-      },
       {
         path: '/about',
         component: 'src/pages/About',
@@ -49,9 +46,58 @@ export default {
         }),
       },
       {
+        path: '/',
+        component: 'src/pages/Home',
+        getData: () => ({
+          furnitures,
+        }),
+      },
+      {
+        path: '/furniture',
+        component: 'src/pages/Furniture',
+        getData: () => ({
+          furnitures,
+        }),
+        children: furnitures.map(post => ({
+          path: `/post/${post.id}`,
+          component: 'src/containers/FurniturePost',
+          getData: () => ({
+            post,
+          }),
+        })),
+      },
+      {
+        path: '/cards',
+        component: 'src/pages/Cards',
+        getData: () => ({
+          cardses,
+        }),
+        children: cardses.map(post => ({
+          path: `/morepost/${post.id}`,
+          component: 'src/containers/CardsPost',
+          getData: () => ({
+            post,
+          }),
+        })),
+      },
+      {
+        path: '/engravings',
+        component: 'src/pages/Engravings',
+        getData: () => ({
+          engravingses,
+        }),
+        children: engravingses.map(post => ({
+          path: `/stuffpost/${post.id}`,
+          component: 'src/containers/EngravingsPost',
+          getData: () => ({
+            post,
+          }),
+        })),
+      },
+      {
         is404: true,
         component: 'src/pages/404',
       },
-    ]
+      ]
   },
 }

@@ -1,6 +1,6 @@
 /* global styles */
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Cinzel', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
@@ -33,6 +33,7 @@ article {
 .header-nav {
   max-width: 650px;
   margin: 0 auto;
+  text-align: end;
 }
 .header-link {
   font-size: 18px;
@@ -45,10 +46,12 @@ article {
 
 /* Home */
 .home-ul {
+  display: flex;
   padding: 0;
+  justify-content: space-evenly;
 }
 .home-li {
-  display: flex;
+  flex-direction: row;
   align-items: center;
   margin-bottom: 16px;
   border: 1px solid #eee;
@@ -88,4 +91,9 @@ article {
 }
 .about-author {
   margin-bottom: 72px;
+}
+
+img {
+  width: 150px;
+  height: 75px;
 }
