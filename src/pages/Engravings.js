@@ -6,7 +6,7 @@ export default withRouteData(({ engravingses }) => (
     <ul className="home-ul">
       {engravingses.map((post, i) => (
         <li className="home-li" key={i} >
-          <Link to={`/post/${post.id}`} className="home-link">
+          <Link to={`/engravings/post/${post.id}`} className="home-link">
           {console.log('This is the engravings post', post)}
             <div className="home-placeholder">
             <h3>{post.title}</h3>
