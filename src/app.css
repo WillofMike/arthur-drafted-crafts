@@ -6,6 +6,8 @@ body {
   margin: 0;
   font-size: 16px;
   line-height: 1.5;
+  background-color: #D1CEC5;
+  
 }
 main {
   max-width: 650px;
@@ -23,10 +25,12 @@ article {
 
 /* Header */
 .header-header {
+  background-color: #452B29;
   padding: 24px 32px;
   margin-bottom: 32px;
   text-align: center;
 }
+
 .header-h1 {
   font-weight: 100;
 }
@@ -38,48 +42,58 @@ article {
 .header-link {
   font-size: 18px;
   margin-right: 16px;
+  text-align: center;  
 }
 .header-link.active {
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* Home */
-.home-ul {
+.card-ul {
   display: flex;
   padding: 0;
   justify-content: space-evenly;
+  margin-top: 5px;
+  flex-flow: row wrap;
 }
-.home-li {
+.card-li {
+  background-color: #E3CCA1;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 16px;
   border: 1px solid #eee;
   overflow: hidden;
   border-radius: 5px;
+  border-spacing: 6px;
+  margin-top: 10px;
 }
-.home-li:hover {
+.card-li:hover {
   box-shadow: 1px 1px 5px #999;
 }
-.home-link {
+.card-title {
+  color: #997C67;
+  margin-left: 5px;
+}
+.card-description {
+  color: #997C67;
+  padding-left: 5px;
+  width: 195px;
+}
+.card {
   display: flex;
   color: #000;
 }
-.home-placeholder {
-  background-color: #eee;
-  min-width: 100px;
-  margin-right: 24px;
+.card-placeholder {
+  width: 200px;
+  height: 240px;
 }
-.home-img {
+.card-image {
   display: block;
-  height: 100%;
+  width: 100%;
+  height: 70%;
 }
 
 /* Post */
-.placeholder {
-  height: 366px;
-  background-color: #eee;
-}
 
 /* About page */
 .about-header {
@@ -93,7 +107,3 @@ article {
   margin-bottom: 72px;
 }
 
-img {
-  width: 150px;
-  height: 75px;
-}

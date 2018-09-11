@@ -3,22 +3,23 @@ import { withRouteData, Link } from 'react-static'
 
 export default withRouteData(({ engravingses }) => (
   <section>
-    <ul className="home-ul">
-      {engravingses.map((post, i) => (
-        <li className="home-li" key={i} >
-          <Link to={`/engravings/post/${post.id}`} className="home-link">
-          {console.log('This is the engravings post', post)}
-            <div className="home-placeholder">
-            <h3>{post.title}</h3>
-              <img
-                className="home-link"
-                alt={post.title}
-                src={`${post.laserImage.url}`}
-                />
-            </div>
-          </Link>
-        </li>
-      ))}
-    </ul>
+      <ul className="card-ul">
+        {engravingses.map((post, i) => (
+          <li className="card-li" key={i} >
+            <Link to={`/engravings/post/${post.id}`} className="card-image">
+              <h3 className="card-title">{post.title}</h3>
+              <div className="card-placeholder">
+                <img
+                  className="card-image"
+                  alt={post.title}
+                  src={`${post.laserImage.url}`}
+                  />
+                <p className="card-description">{post.description}</p>
+              </div>
+            </Link>
+            {console.log(post)}
+          </li>
+        ))}
+      </ul>
   </section>
 ))
