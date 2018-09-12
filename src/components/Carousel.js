@@ -31,4 +31,6 @@ export default withRouteData(({ cardses }) =>
     </Carousel>
 );
     
-// look through the trouble shooting and emulate what they're doing in the docs. You're making this more difficult than it is!
+// create a seperate cms field for the TWO!!!! different carousels fields: 
+// 1. One as a eyegrabber 
+// 2. Then the showcase
