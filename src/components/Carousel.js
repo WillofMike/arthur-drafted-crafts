@@ -1,18 +1,31 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Carousel } from 'react-responsive-carousel';
-import { withRouteData } from 'react-static';
+import { withRouteData, Link } from 'react-static';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
  
-export default withRouteData(({ furnitures }) =>
-    <Carousel dynamicHeight infiniteLoop >
+export default withRouteData(({ cardses }) =>
+    <Carousel 
+        className='carousel'
+        dynamicHeight={true} 
+        autoPlay={true}
+        infiniteLoop={true}
+        stopOnHover={true}
+        showStatus={false}
+        showThumbs={false}
+        useKeyboardArrows={true}
+        swipeable={true}
+        interval={3000}
+        >
     {
-        furnitures.map((props, index) => (
-            <div key={index}>
-               <img className="legend" src={props.image.url} />
-               <p>Legend</p>
-            </div>
+        cardses.map((props, index) => (
+            <Link to={`/cards/post/${props.id}`}>
+                <div key={index}>
+                    <img className="legend" src={props.cardImage.url} />
+                    <p className='carousel'>{props.title}</p>
+                </div>
+            </Link>
         ))
     }
     </Carousel>

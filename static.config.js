@@ -50,6 +50,7 @@ export default {
         component: 'src/pages/Home',
         getData: () => ({
           furnitures,
+          cardses
         }),
       },
       {
