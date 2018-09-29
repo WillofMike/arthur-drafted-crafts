@@ -14,7 +14,9 @@ export default withRouteData(({ furnitures }) => (
                   alt={post.title}
                   src={`${post.image.url}`}
                   />
+              <div>
                 <p className="card-description">{post.description}</p>
+              </div>
               </div>
             </Link>
             {console.log(post)}

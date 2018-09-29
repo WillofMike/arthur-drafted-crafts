@@ -7,6 +7,7 @@ const query = `{
     id
     title
     description
+    price
     image {
       url
     }
@@ -15,6 +16,7 @@ const query = `{
     id
 		title
     description
+    price
     cardImage {
       url
     }
@@ -23,7 +25,16 @@ const query = `{
     id
 		title
     description
+    price
     laserImage {
+      url
+    }
+  }
+  taleTimberses{
+    id
+    title
+    description
+    timberImage {
       url
     }
   }
@@ -34,7 +45,8 @@ export default {
     const {
       furnitures, 
       cardses,
-      engravingses
+      engravingses,
+      taleTimberses
     } = await request(GRAPHCMS_API, query)
 
     return [
@@ -50,7 +62,8 @@ export default {
         component: 'src/pages/Home',
         getData: () => ({
           furnitures,
-          cardses
+          cardses, 
+          taleTimberses
         }),
       },
       {

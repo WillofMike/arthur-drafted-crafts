@@ -1,6 +1,6 @@
 /* global styles */
 body {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
@@ -10,7 +10,7 @@ body {
   
 }
 main {
-  max-width: 650px;
+  max-width: 850px;
   margin: 32px auto;
   padding: 0 24px;
 }
@@ -85,18 +85,86 @@ article {
 }
 .card-placeholder {
   width: 200px;
-  height: 240px;
+  height: 18em;
 }
 .card-image {
   display: block;
   width: 100%;
-  height: 70%;
+  height: 60%;
 }
 
+
+/* Process.js Icon Container Stying */
+.icon-section{
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  border-top: solid gray 2px;
+  border-bottom: solid gray 2px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.icon-title{
+  font-size: xx-large;
+  font-family: 'Montserrat', sans-serif;  
+}
+.icon-h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+.icon-cell {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+.icon-container {
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* Showcase Carousel */
+.showcase-carousel-image {
+  width: 100%;
+}
+
+/* Tale of Timbers Component */
+.timber-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.timber-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.timber-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.timber-image {
+  width: 200px;
+}
+
+/* Carousel */
 .carousel {
-  font-family: cursive;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: xx-large;
   color: white;
+  border: solid black 4px;
+}
+
+.carousel-image {
+  height: 450px;
 }
 
 /* Post */

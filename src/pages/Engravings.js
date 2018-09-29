@@ -14,7 +14,9 @@ export default withRouteData(({ engravingses }) => (
                   alt={post.title}
                   src={`${post.laserImage.url}`}
                   />
+              <div>
                 <p className="card-description">{post.description}</p>
+              </div>
               </div>
             </Link>
             {console.log(post)}

@@ -5,7 +5,7 @@ import { withRouteData, Link } from 'react-static';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
  
-export default withRouteData(({ cardses }) =>
+export default withRouteData(({ taleTimberses }) =>
 <section >
     <Carousel 
         className='presentation-mode'
@@ -20,11 +20,11 @@ export default withRouteData(({ cardses }) =>
         interval={5000}
         >
     {
-        cardses.map((props, index) => (
+        taleTimberses.map((props, index) => (
             <Link to={`/cards/post/${props.id}`} key={index}>
                 <div>
-                    <p className='carousel'>{props.title}</p>
-                    <img className='my-slide secondary complex carousel-image' src={props.cardImage.url} />
+                    <p className='showcase-carousel'>{props.title}</p>
+                    <img className='my-slide secondary complex showcase-carousel-image' src={props.timberImage.url} />
                 </div>
             </Link>
         ))

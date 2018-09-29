@@ -13,8 +13,13 @@ export default withRouteData(({ post }) => (
           alt={post.title}
           src={`${post.image.url}`}
           />
-      <p className="card-description">{post.description}</p>
+      <div>
+        <p className="card-description">{post.description}</p>
       </div>
+      </div>
+        <div>
+          <p className="card-description">Cost: {post.price}</p>
+        </div>
 {console.log(post)}
     </div>
     </div>
