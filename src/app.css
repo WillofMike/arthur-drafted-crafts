@@ -137,6 +137,10 @@ article {
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+  border-top: solid gray 2px;
+  border-bottom: solid gray 2px;
+  padding-bottom: 25px;  
+  margin-top: 25px;
 }
 .timber-container {
   display: flex;
